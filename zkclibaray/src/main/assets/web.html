@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type"	content="text/html;charset=utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+    <style type="text/css">
+	input{ width: 49%;
+           height: 45 px;
+           margin-right: 1%;
+           margin-bottom: 1%}
+    #content{ color: rgb(255,0,0);
+    	      font-style: italic;
+    	      height: auto;}
+</style>
+    <script type="text/javascript">
+
+function javacalljs(){
+	 document.getElementById("content").innerHTML =
+         "<br\>JAVA调用了JS的无参函数";
+}
+
+function javacalljswith(arg){
+	 document.getElementById("content").innerHTML =(arg);
+}
+</script>
+</head>
+<body>
+<h1><div id="content">内容显示</div></h1>
+<input type="button"  value="生成二维码" onclick="window.android.createQRCode('http://www.sznewbest.com')"/><input type="button"  value="生成条码" onclick="window.android.createBarCode('9825146225')"/>
+<br/>
+<input type="button"  value="打印文本" onclick="window.android.printText('http://www.sznewbest.com')"/><input type="button"  value="打印Unicode" onclick="window.android.printUnicode('hello, begin to smart print!')"/>
+<br/>
+<input type="button"  value="选择图片" onclick="window.android.selectPic()"/><input type="button"  value="打印图片" onclick="window.android.printPic()"/>
+<br/>
+<input type="button"  value="打印网络图片" onclick="window.android.printNetPic('http://image.szzkc.com/UploadFiles/Images//ZKC_%E7%BC%96%E5%8F%B7%EF%BC%9A1//%E6%A0%B9%E7%9B%AE%E5%BD%95/%E4%BA%A7%E5%93%81%E5%9B%BE%E7%89%87/5804/5804-300px.jpg')"/><input type="button"  value="打印模板一" onclick="window.android.printStyleOne()"/>
+<br/>
+<input type="button"  value="打印模板二" onclick="window.android.printStyleTwo()"/><input type="button"  value="打印模板三" onclick="window.android.printStyleThree()"/>
+<br/>
+<br/>
+<br/>
+<input type="button"  value="获取打印机状态" onclick="window.android.getPrintStatus()"/>
+</body>
+</html>

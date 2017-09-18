@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">布草入库系统</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--login-->
+    <string name="hint_username">用户名</string>
+    <string name="hint_pwd">密码</string>
+    <string name="hint_login_btn">登录</string>
+    <string name="lg_input_empty_tip">输入存在空值！！</string>
+    <string name="lg_factory_name_error">工厂名不正确！</string>
+    <string name="lg_username_or_pwd_error">用户名或密码不正确！</string>
+    <string name="lg_loading_tip">登录中... </string>
+    <string name="login">登  录</string>
+
+    <!--main activity-->
+    <string name="main_exit_tip">再按一次退出系统</string>
+    <string name="main_tb_title_manager">布草管理系统</string>
+    <string name="main_tb_title_place_order">下单</string>
+
+    <!--left drawer menu -->
+    <string name="dw_menu_linen_manager">布草管理</string>
+    <string name="dw_menu_print_test">打印机测试</string>
+    <string name="dw_menu_device_connect">设备连接</string>
+    <string name="dw_menu_others">其它</string>
+    <string name="dw_menu_exit">退出登录</string>
+
+    <!--submit result activity-->
+    <string name="useless_tag">无用标签的数量有：</string>
+    <string name="submit_order">-------------收货单--------------</string>
+    <string name="submit_date">日期：</string>
+    <string name="submit_user">收发员："</string>
+    <string name="submit_level1">酒店：</string>
+    <string name="submit_type">类别：</string>
+    <string name="submit_num">数量：</string>
+    <string name="submit_customer_sign">客户签字________________________</string>
+    <string name="submit_arfid">--www.arfid.co(阿菲德洗涤系统)--</string>
+    <string name="submit_alter_title">提交结果</string>
+    <string name="submit_alter_msg">提交成功！！！</string>
+    <string name="submit_alter_pos">再次打印收据</string>
+    <string name="submit_alter_nev">继续扫描</string>
+
+</resources>

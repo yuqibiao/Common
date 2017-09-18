@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.smartdevice.aidltestdemo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 允许应用程序写入外部存储器 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许使用相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- NFC权限声明 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity android:name=".CaptureActivity"/>
+        <activity android:name=".ScannerActivity"/>
+    </application>
+
+</manifest>

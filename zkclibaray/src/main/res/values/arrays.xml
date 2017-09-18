@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<resources>
+    <string-array name="cmd">
+        <item> detection model,1B 2B</item>
+        <item>horizontal tab,09</item>
+        <item>newline,0A</item>
+        <item>Print this store content,0D</item>
+        <item>initialize the printer,1B 40</item>
+        <item>Allow underline print,1C 2D 01</item>
+        <item>ban underline print,1C 2D 00</item>
+        <item>Allow bold print,1B 45 01</item>
+        <item>ban bold print,1B 45 00</item>
+        <item>Select the font: ASCII (12 * 24) characters (24 * 24),1B 4D 00</item>
+        <item>Select the font: ASCII (8 * 16) characters (16 * 16),1B 4D 01</item>
+        <item>characters correctly: no amplification,1D 21 00</item>
+        <item>2-fold character: Portrait zoom,1D 21 01</item>
+        <item>2 times the width of the character: horizontal zoom,1D 21 10</item>
+        <item>2 times the overall character amplification,1D 21 11</item>
+        <item>Left,1B 61 00</item>
+        <item>Align,1B 61 01</item>
+        <item>ranks right alignment,1B 61 02</item>
+        <item>page feed,0C</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>15,CP936,[简体中文]</item>
+        <item>14,CP950,[繁体中文]</item>
+        <item>0,PC437,[美国，欧洲标准]</item>
+        <item>2,PC850,[多语言，西欧语 ]</item>
+        <item>3,PC860,[葡萄牙语]</item>
+        <item>4,PC863,[加拿大-法语 ]</item>
+        <item>5,PC865，[北欧 - 德语，日耳曼德语]</item>
+        <item>6,PC1252,[West Europe]</item>
+        <item>7,PC737,[Greek]</item>
+        <item>8,PC862,[Hebrew]</item>
+        <item>9,CP755,[East Europe]</item>
+        <item>10,Iran,[伊朗 ]</item>
+        <item>11,CP775,[波罗的海语]</item>
+        <item>12,CP932,[日文]</item>
+        <item>13,CP949,[韩文 ]</item>
+        <item>16,PC1252,</item>900
+        <item>17,PC866,[Cyrillice*2]</item>
+        <item>18,PC852,[Latin2]</item>
+        <item>19,PC858,[西欧语]</item>
+
+        <item>20,CP861,[冰岛语]</item>
+        <item>21,CP866,[斯拉夫语/俄语 ]</item>
+        <item>22,CP855,[斯拉夫语 保加利亚 ]</item>
+        <item>23,CP857,[土耳其语]</item>
+        <item>24,CP864,[阿拉伯语]</item>
+        <item>25,CP869,[希腊语(2)]</item>
+
+        <item>32,CP874,[泰文]</item>
+        <item>33,CP1250,[中欧 Latin-2]
+        </item>
+        <item>34,CP1251,[西里尔文 斯拉夫语 俄语 ]
+        </item>
+        <item>35,CP1252,[西欧(拉丁文 I)]
+        </item>
+        <item>36,CP1253,[希腊文]</item>
+        <item>37,CP1254,[土耳其文]
+        </item>
+        <item>38,CP1255,[希伯来文]
+        </item>
+        <item>39,CP1256,[阿拉伯文]
+        </item>
+        <item>40,P1257,[波罗的海文]
+        </item>
+        <item>41,CP1258,[越南]</item>
+    </string-array>
+</resources>

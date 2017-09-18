@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="60dp"
+    android:background="@android:color/background_light"  
+    android:orientation="horizontal" >  
+  
+    <LinearLayout  
+        android:id="@+id/linner_scanner"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_weight="1"  
+        android:gravity="center"  
+        android:orientation="vertical" >  
+  
+        <!-- 通过设置 ImageButton  android:clickable="false" 属性 ; 使其 没有点击的属性,不和 LinearLayout抢占点击事件 -->  
+  
+        <ImageButton  
+            android:id="@+id/img_scanner"  
+            android:layout_width="30dp"  
+            android:layout_height="30dp"  
+            android:background="@android:color/transparent"  
+            android:clickable="false"  
+            android:scaleType="centerCrop"  
+            android:src="@drawable/menu_scanner" />  
+  
+        <TextView  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="@string/scan_test"  
+            android:textColor="@android:color/black"  
+            android:textSize="16sp" />  
+    </LinearLayout>  
+  
+    <LinearLayout  
+        android:id="@+id/linner_setting"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_weight="1"  
+        android:gravity="center"  
+        android:orientation="vertical" >  
+  
+        <ImageButton  
+            android:id="@+id/img_setting"  
+            android:layout_width="30dp"  
+            android:layout_height="30dp"  
+            android:background="@android:color/transparent"  
+            android:clickable="false"  
+            android:scaleType="centerCrop"  
+            android:src="@drawable/menu_setting" />  
+  
+        <TextView  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="@string/scan_test"  
+            android:textColor="@android:color/black"  
+            android:textSize="16sp" />  
+    </LinearLayout>  
+  
+    <LinearLayout  
+        android:id="@+id/linner_help"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_weight="1"  
+        android:gravity="center"  
+        android:orientation="vertical" >  
+  
+        <ImageButton  
+            android:id="@+id/img_help"  
+            android:layout_width="30dp"  
+            android:layout_height="30dp"  
+            android:background="@android:color/transparent"  
+            android:clickable="false"  
+            android:scaleType="centerCrop"  
+            android:src="@drawable/menu_help" />  
+  
+        <TextView  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="@string/func_instruction"  
+            android:textColor="@android:color/black"  
+            android:textSize="16sp" />  
+    </LinearLayout>   
+  
+</LinearLayout>  

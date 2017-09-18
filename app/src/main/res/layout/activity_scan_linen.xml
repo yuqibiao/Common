@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_scan"
+        style="@style/base_tb" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/base_tv"
+            android:layout_width="match_parent"
+            android:text="当前仓库为：" />
+
+        <TextView
+            android:id="@+id/tv_warehouse"
+            style="@style/base_tv"
+            android:layout_width="match_parent"
+            android:text="A仓库"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.yyyu.baselibrary.view.WhewView
+            android:id="@+id/wv_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.yyyu.baselibrary.view.RoundImageView2
+            android:id="@+id/my_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher"
+            imagecontrol:border_inside_color="#bc0978"
+            imagecontrol:border_outside_color="#ba3456" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/base_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0"
+        android:onClick="startScan"
+        android:text="开始扫描" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        style="@style/base_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0"
+        android:onClick="stopScan"
+        android:text="结束扫描" />
+</LinearLayout>

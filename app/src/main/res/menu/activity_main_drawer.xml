@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_home"
+            android:textSize="18sp"
+            android:title="@string/dw_menu_linen_manager" />
+        <item
+            android:id="@+id/nav_print_test"
+            android:icon="@mipmap/ic_print"
+            android:textSize="18sp"
+            android:title="@string/dw_menu_print_test" />
+        <item
+            android:id="@+id/nav_bt"
+            android:icon="@mipmap/ic_bt"
+            android:textSize="18sp"
+            android:title="@string/dw_menu_device_connect" />
+        <!--<item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="查看订单" />-->
+    </group>
+
+    <item android:title="其它">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@mipmap/ic_exit"
+                android:textSize="18sp"
+                android:title="@string/dw_menu_exit" />
+        </menu>
+    </item>
+
+</menu>
