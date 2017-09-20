@@ -51,6 +51,7 @@ public class SplashActivity extends AppCompatActivity {
             BluetoothDevice device = (BluetoothDevice) it.next();
             String deviceName = device.getName();
             if (deviceName.startsWith("SwingU")) {
+                MyLog.e(TAG , "device=="+device);
                 swingUManager.connectDevice(device);
                 //设置所连接手持机的id
                 application.setCurrentReaderId(device.getAddress());
@@ -79,6 +80,9 @@ public class SplashActivity extends AppCompatActivity {
                     application.setUser_id(user_id);
                     application.setUser_name(user_name);
                     application.setReaderIdList(readerIdList);
+
+                    //---TODO 刷新数据
+
                     MainActivity.startAction(SplashActivity.this);
                 } else {//未登录
                     LoginActivity.startAction(SplashActivity.this);

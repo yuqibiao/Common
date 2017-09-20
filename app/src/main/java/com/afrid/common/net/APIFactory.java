@@ -22,8 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIFactory {
 
 
-    //public static final String BASE_URL="http://192.168.1.111:8080/ssh/";
-    public static final String BASE_URL="http://fangkalaundryapptest.chinacloudsites.cn";
+    public static final String BASE_URL="http://192.168.1.111:8080/ssh/";
+    //public static final String BASE_URL="http://fangkalaundryapptest.chinacloudsites.cn";
 
     private static final int DEFAULT_TIMEOUT = 5;
 

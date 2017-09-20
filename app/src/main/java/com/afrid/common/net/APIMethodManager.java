@@ -3,11 +3,13 @@ package com.afrid.common.net;
 import com.afrid.common.bean.json.BaseJsonResult;
 import com.afrid.common.bean.json.return_data.GetTagInfoListReturn;
 import com.afrid.common.bean.json.return_data.GetWarehouseReturn;
+import com.afrid.common.bean.json.return_data.GetWashFactoryReturn;
 import com.afrid.common.bean.json.return_data.LoginReturn;
 import com.afrid.common.net.api.KunmingApi;
 import com.yyyu.baselibrary.utils.MyLog;
 
 import okhttp3.RequestBody;
+import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -43,7 +45,7 @@ public class APIMethodManager {
     /**
      * 保存收据
      *
-     * @param request SaveReceiptRequest对应的json
+     * @param request  SaveReceiptRequest对应的json
      * @param callback
      */
     public Subscription saveReceipt(String request, final IRequestCallback<BaseJsonResult<String>> callback) {
@@ -74,7 +76,7 @@ public class APIMethodManager {
     /**
      * 得到标签的信息
      *
-     * @param request GetTagInfoRequest对应的json
+     * @param request  GetTagInfoRequest对应的json
      * @param callback
      */
     public Subscription getTagInfoList(String request, final IRequestCallback<GetTagInfoListReturn> callback) {
@@ -132,9 +134,41 @@ public class APIMethodManager {
     }
 
     /**
+     * 得到用户对应的洗涤厂
+     *
+     * @param userId
+     * @param callback
+     * @return
+     */
+    public Subscription getWashFactory(Integer userId, final IRequestCallback<GetWarehouseReturn> callback) {
+
+        Subscription subscribe = kunmingApi.getWashFactory(userId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<GetWashFactoryReturn>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        callback.onFailure(e);
+                    }
+
+                    @Override
+                    public void onNext(GetWashFactoryReturn getWashFactoryReturn) {
+                        callback.onSuccess(getWashFactoryReturn);
+                    }
+                });
+        return subscribe;
+
+    }
+
+    /**
      * 登录
      *
-     * @param request LoginRequest对应的json
+     * @param request  LoginRequest对应的json
      * @param callback
      */
     public Subscription login(String request, final IRequestCallback<LoginReturn> callback) {

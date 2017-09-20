@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">布草入库系统</string>
+    <string name="app_name">布草盘存系统</string>
 
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>

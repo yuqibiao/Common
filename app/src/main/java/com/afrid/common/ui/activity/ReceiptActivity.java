@@ -176,16 +176,16 @@ public class ReceiptActivity extends MyBaseActivity {
                             .setPositiveButton(resourceUtils.getStr(R.string.submit_alter_pos), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-                                    String printStr = PrintStrBuildUtils.buildReceipt(application.getUser_name(), 
+                                    String printStr = PrintStrBuildUtils.buildReceipt(true , application.getUser_name(),
                                             warehouseName, mainId, ReceiptActivity.this.resultData.getMIxTagLinenList());
                                     zkcManager.getPrintManager().printText(printStr+printStr);
                                 }
                             })
                             .create();
                     alertDialog.show();
-                    String printStr = PrintStrBuildUtils.buildReceipt(application.getUser_name(),
+                    String printStr = PrintStrBuildUtils.buildReceipt(false , application.getUser_name(),
                             warehouseName, mainId, ReceiptActivity.this.resultData.getMIxTagLinenList());
-                    zkcManager.getPrintManager().printText(printStr+printStr);
+                    zkcManager.getPrintManager().printText(printStr);
                 } else {
                     btn_submit.setEnabled(true);
                     MyToast.showShort(ReceiptActivity.this, "提交失败，请重新提交！");

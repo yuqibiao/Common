@@ -22,7 +22,7 @@ public class PrintStrBuildUtils {
      *
      * @return
      */
-    public static String buildReceipt(String username, String warehouse,String receiptId
+    public static String buildReceipt(boolean isRepeat,String username, String warehouse,String receiptId
             , List<SubReceiptListBean> subReceiptListBeanList) {
         StringBuilder sb = new StringBuilder();
         SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -31,7 +31,11 @@ public class PrintStrBuildUtils {
         String date = DATE_FORMAT.format(Calendar.getInstance(TIME_ZONE).getTime());
 
         sb.append("\n");
-        sb.append("-------------收据单------------\n");
+        if (isRepeat){
+            sb.append("-------------盘存单------------\n");
+        }else{
+            sb.append("--------盘存单（重印）---------\n");
+        }
         sb.append("\n");
         sb.append("\n");
         sb.append("流水号："+receiptId+"\n");

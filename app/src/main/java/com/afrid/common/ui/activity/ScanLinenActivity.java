@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.afrid.common.MyApplication;
 import com.afrid.common.R;
 import com.afrid.common.bean.json.GetTagInfoRequest;
 import com.afrid.swingu.utils.SwingUManager;
@@ -41,11 +42,13 @@ public class ScanLinenActivity extends MyBaseActivity {
     private List<String> tagIdList;
     private SwingUManager swingUManager;
     private String warehouseName;
+    private MyApplication application;
 
     @Override
     public void beforeInit() {
         super.beforeInit();
         swingUManager = SwingUManager.getInstance(this);
+        application = (MyApplication) getApplication().getApplicationContext();
     }
 
     @Override
@@ -92,6 +95,14 @@ public class ScanLinenActivity extends MyBaseActivity {
      * 开始扫描
      */
     public void startScan(View view) {
+        tagIdSet.clear();
+        //---判断设备是否为用户绑定的
+        if (!application.getReaderIdList().contains(application.getCurrentReaderId())) {
+            MyToast.showShort(this, "请连接您自己的手持机！");
+            BTDeviceScanActivity.startAction(this);
+            return;
+        }
+
         if (!SwingUManager.getInstance(this).isConnected()) {
             MyToast.showShort(this, "手持机未连接！");
             BTDeviceScanActivity.startAction(this);
@@ -111,14 +122,14 @@ public class ScanLinenActivity extends MyBaseActivity {
         tagIdList = new ArrayList<>(tagIdSet);
         GetTagInfoRequest request = new GetTagInfoRequest();
         request.setRequestData(tagIdList);
-        ReceiptActivity.startActionForResult(this, mGson.toJson(request) ,warehouseName);
+        ReceiptActivity.startActionForResult(this, mGson.toJson(request), warehouseName);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==ReceiptActivity.RECEIPT_REQUEST_CODE
-                && resultCode==ReceiptActivity.RECEIPT_RESULT_CODE){
+        if (requestCode == ReceiptActivity.RECEIPT_REQUEST_CODE
+                && resultCode == ReceiptActivity.RECEIPT_RESULT_CODE) {
             //正常的提交receipt后清空数据
             tagIdSet.clear();
             tagIdList.clear();

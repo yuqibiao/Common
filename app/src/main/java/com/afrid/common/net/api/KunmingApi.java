@@ -3,6 +3,7 @@ package com.afrid.common.net.api;
 import com.afrid.common.bean.json.BaseJsonResult;
 import com.afrid.common.bean.json.return_data.GetTagInfoListReturn;
 import com.afrid.common.bean.json.return_data.GetWarehouseReturn;
+import com.afrid.common.bean.json.return_data.GetWashFactoryReturn;
 import com.afrid.common.bean.json.return_data.LoginReturn;
 
 import okhttp3.RequestBody;
@@ -31,6 +32,9 @@ public interface KunmingApi {
 
     @GET("warehouse/v1/getWarehouse/userId/{userId}")
     Observable<GetWarehouseReturn> getWarehouse(@Path("userId") Integer userId);
+
+    @GET("warehouse/v1/getWashFactory/userId/{userId}")
+    Observable<GetWashFactoryReturn> getWashFactory(@Path("userId") Integer userId);
 
     @POST("user/v1/checkUser")
     Observable<LoginReturn> login(@Body RequestBody requestBody);

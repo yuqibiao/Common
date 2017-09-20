@@ -7,6 +7,7 @@ import com.afid.utils.ScanManager;
 import com.afid.utils.ZKCManager;
 import com.afrid.common.R;
 import com.afrid.common.bean.SubReceiptListBean;
+import com.afrid.common.ui.dialog.WashFactoryChoiceDialog;
 import com.smartdevice.aidltestdemo.CaptureActivity;
 import com.smartdevice.aidltestdemo.ScannerActivity;
 import com.yyyu.baselibrary.template.BaseActivity;
@@ -122,6 +123,11 @@ public class TestActivity extends BaseActivity {
         sb.append("\n");
         sb.append("\n");
         return sb.toString();
+    }
+
+    public void showDialog(View view){
+        WashFactoryChoiceDialog dialog = new WashFactoryChoiceDialog(this , 4);
+        dialog.show();
     }
 
 

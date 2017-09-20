@@ -91,6 +91,10 @@ public class BTDeviceScanActivity extends MyBaseActivity {
         btDeviceAdapter.notifyDataSetChanged();
     }
 
+    public void setBT(View view){
+        btManager.toSysBTActivity(this);
+    }
+
 
     public static void startAction(Activity activity) {
         Intent intent = new Intent(activity,BTDeviceScanActivity.class);

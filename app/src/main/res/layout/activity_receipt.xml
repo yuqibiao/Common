@@ -21,30 +21,29 @@
             android:padding="5dp">
 
             <TextView
+                style="@style/base_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/base_tv"
                 android:text="无用标签数量：" />
 
             <TextView
                 android:id="@+id/tv_useless_tag"
+                style="@style/base_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/base_tv"
                 android:text="无"
                 android:textColor="@color/colorAccent" />
         </LinearLayout>
 
 
         <TextView
+            style="@style/base_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/base_tv"
             android:layout_marginTop="20dp"
             android:padding="5dp"
-            android:text="扫描结果为："
-            android:textColor="#787878"
-            />
+            android:text="盘点结果为："
+            android:textColor="#787878" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_warehouse"
